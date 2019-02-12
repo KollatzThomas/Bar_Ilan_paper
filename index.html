@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>epidat evolution</title>
+
+        <!-- meta information -->
+        <meta name="author" content="Thomas Kollatz" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=1024" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+
+        <!-- favicons -->
+        <link rel="shortcut icon" href="resources/img/favicon.png" />
+        <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+        <!-- CSS reset and grid -->
+        <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+        <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+        <!-- fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext"
+            rel="stylesheet" type="text/css" />
+
+        <!-- styles for included libraries -->
+
+        <!-- chartist -->
+        <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" />
+
+        <!-- unite gallery -->
+        <link rel="stylesheet" href="vendor/unitegallery/css/unite-gallery.css" type="text/css" />
+
+        <!-- codemirror -->
+        <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" />
+
+
+
+        <!-- highlight -->
+        <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+        <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="vendor/swiper/swiper.min.css" />
+
+
+        <!-- magnific popup -->
+        <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+        <!-- standard presentation styles -->
+        <link href="resources/css/style.css" rel="stylesheet" />
+
+        <!-- custom presentation styles -->
+        <link href="resources/css/custom.css" rel="stylesheet" />
+
+        <!-- hint styles -->
+        <link href="resources/css/hint.css" rel="stylesheet" />
+
+        <!-- js needed in head -->
+
+        <!-- greuler -->
+        <script src="vendor/d3/d3-3.5.6.js"></script>
+        <script src="vendor/cola/cola.v3.min.js"></script>
+        <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+        <!-- html5 dataset shim for IE -->
+        <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+        <!-- UnifrakturCook for Headers -->
+        <link href="https://fonts.googleapis.com/css?family=UnifrakturCook:700|UnifrakturMaguntia"
+            rel="stylesheet" />
+    </head>
+    <body>
+        <div class="fallback-message">
+            <p> Your browser <strong>doesn't support the features required</strong> by
+                impress.mod.js, so you are presented with a simplified version of this presentation. </p>
+            <p> For the best experience please use the latest <strong>Chrome</strong>,
+                    <strong>Safari</strong> or <strong>Firefox</strong> browser. </p>
+        </div>
+        <div id="impress">
+            <div class="step" id="start">
+                <h5><strong>2019-02-13</strong> | <a
+                        href="https://www1.biu.ac.il/indexE.php?id=6760&amp;pt=27&amp;pid=117&amp;level=2&amp;cPath=6760/"
+                        >Bar Ilan Workshop</a> Ramat Gan , Israel </h5>
+                <h5><a href="https://www1.biu.ac.il//File/news/file_biu_18_12_23_10_00.pdf"
+                        >Technological Tools for Manuscript Research</a></h5>
+                <h2 class="red down-100 ">Evolution of a DH-project</h2>
+                <h3 class=" down-25 ">Turns and Trends in 17 years of the Digital Epigraphic
+                    Endeavour</h3>
+                <!--<div class="hint">
+                    <blockquote class="line-height-one">☞ Use a spacebar or arrow keys to navigate, <br />☞ a mouseclick on
+                            <a href="#">text in blue</a> will open an external website, <br /> ☞ a
+                        mouseclick on an image will enlarge it.</blockquote>
+                </div>-->
+                <h5 class="down-100"> link to presentation <a
+                        href="https://kollatzthomas.github.io/2019_Bar_Ilan"
+                        title="View the presentation online">
+                        https://kollatzthomas.github.io/2019_Bar_Ilan</a>
+                </h5>
+                <h5>
+                    <strong><a href="http://orcid.org/0000-0003-1904-1841"
+                            title="Thomas Kollatz on OrcID">Thomas Kollatz</a> | <img
+                            src="resources/img/Twitter_bird_logo_2012.svg" alt="Twitter"
+                            class="twitter-icon" />
+                        <a href="https://twitter.com/kol_t" title="Thomas Kollatz on Twitter"
+                            >@kol_t</a> | <img src="resources/img/Octicons-mark-github.svg"
+                            alt="Twitter" class="gh-icon" />
+                        <a href="https://github.com/kollatzthomas" title="Thomas Kollatz on GitHub"
+                            >kollatzthomas</a> | <a
+                            href="https://creativecommons.org/licenses/by/4.0/" title="license"
+                            >CC-BY 4.0</a></strong>
+                </h5>
+            </div>
+            <div class="step">
+                <h2 class="red">Digital Epigraphy </h2>
+                <ol class="line-height-one-five">
+                    <li>examples</li>
+                    <li>Database</li>
+                    <li>Digital Edition(s)</li>
+                    <li>Research Platform</li>
+                    <li>lessons learned</li>
+                </ol>
+            </div>
+            <div class="step">
+                <h1 class="red">01</h1>
+                <h2>Examples</h2>
+            </div>
+            <div class="step">
+                <h2 class="red">headstones from nine centuries</h2>
+                <div id="researchdata" style="display:none;  ">
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=wrm-9009&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Worms: headstone of Jaakov ha-bachur 1077"
+                            src="resources/img/wrm-9009.png" data-image="resources/img/wrm-9009.png"
+                            data-description="foto by Bert Sommer" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=spy-6&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Speyer: headstone of Channa bat Alexander 1183"
+                            src="resources/img/spy-6.png" data-image="resources/img/spy-6.png"
+                            data-description="foto by Laura Augustin" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=mz1-2203&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Mainz: headstone of Meir b. Awraham 1281"
+                            src="resources/img/2203_mz1_LDA-2008-074.png"
+                            data-image="resources/img/2203_mz1_LDA-2008-074.png"
+                            data-description="foto by LDA Mainz" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=wrm-1214&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Worms: Im Heiligen Sand – memorial 1096"
+                            src="resources/img/wrm-1214.png" data-image="resources/img/wrm-1214.png"
+                            data-description="foto by Stefanie Fuchs" style="display:none" />
+                    </a>
+                    <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=bng-221">
+                        <img alt="Bingen: headstone of Juda Mehler 1659"
+                            src="resources/img/bng-221.jpg" data-image="resources/img/bng-221.jpg"
+                            data-description="foto by Andreas Hemstege" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-2338&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Hamburg: headstone of David Hammerschlag 1686"
+                            src="resources/img/2338_FN_0206040127.jpg"
+                            data-image="resources/img/2338_FN_0206040127.jpg"
+                            data-description="foto by Bert Sommer" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-1678&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Hamburg: headstone of Vogel bat Popert 1791"
+                            src="resources/img/1678_FE_0110140126.jpg"
+                            data-image="resources/img/1678_FE_0110140126.jpg"
+                            data-description="foto by Bert Sommer" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=ffb-80&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Frankfurt: headstone of Meir Rothschild 1812"
+                            src="resources/img/ffb0080.jpg" data-image="resources/img/ffb0080.jpg"
+                            data-description="foto by Andreas Hemstege" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-5050&amp;lang=en&amp;anzeige=mix">
+                        <img alt="headstone of Fromet Mendelssohn 1812"
+                            src="resources/img/hha-5050.jpg" data-image="resources/img/hha-5050.jpg"
+                            data-description="foto by Eduard Duckesz" style="display:none" />
+                    </a>
+                    <a href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hht-493"><img
+                            alt="headstone of Schimschon ben Chaijm Bückeburg 1828"
+                            src="resources/img/hht-493.png" data-image="resources/img/hht-493.png"
+                            data-description="foto by Dan Bondy" style="display:none" /></a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=frd-24&amp;lang=en&amp;anzeige=mix">
+                        <img alt="headstone of Roedelheim: Wolf Heidenheim 1832"
+                            src="resources/img/Roedelheim-24.png"
+                            data-image="resources/img/Roedelheim-24.png"
+                            data-description="foto by Bert Sommer" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=kre-22&amp;lang=en&amp;anzeige=mix">
+                        <img alt="headstone of Krefeld: Leopold Ullmann 1843"
+                            src="resources/img/kre-22.png" data-image="resources/img/kre-22.png"
+                            data-description="foto by Andreas Hemstege" style="display:none" />
+                    </a>
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=e28-67&amp;lang=en&amp;anzeige=mix">
+                        <img
+                            alt="Wickrath: headstone of Gretel Spier 1936 manufactured by Leopold Fleischhacker"
+                            src="resources/img/e28-2004.jpg" data-image="resources/img/e28-2004.jpg"
+                            data-description="foto by Bert Sommer" style="display:none" />
+                    </a>
+                </div>
+            </div>
+            <div class="step">
+                <!-- Mainz -->
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-right "><a
+                                href="resources/img/2203_mz1_LDA-2008-074.png"><img
+                                    src="resources/img/2203_mz1_LDA-2008-074.png" /></a></figure>
+                        <p class="x-small right up-25">Mainz – Gedenkfriedhof: <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=mz1-2203&amp;lang=en&amp;anzeige=mix"
+                                >mz1-2203</a><br />foto: LDA Mainz</p>
+                        <blockquote class="right medium">‎‏זה קבר של הרב ר׳ מאיר בר אברהם הכהן הזקן
+                            הנהרג על יחוד השם במ״א לפרט כ״ז בסיון ביום שנשרף בית הכנסת ונקרעו סיפרי
+                            תורה מנוחתו כבוד‏‎ </blockquote>
+                    </div><div class="eight columns">
+                        <dl class="small down-25 line-height-one-five ">
+                            <dt class="red">place of burial</dt>
+                            <dd class="even-left">Mainz</dd>
+                            <dt class="red">name</dt>
+                            <dd class="even-left">Meir b. Awraham HaCohen</dd>
+                            <dt class="red">date of death | date of event</dt>
+                            <dd class="even-left">1281-06-15 | 27. Sivan 5041</dd>
+                            <dt class="red">event</dt>
+                            <dd class="even-left">destruction of the synagogue and the torascrolls: </dd>
+                            <dd class="right">ביום שנשרף בית הכנסת ונקרעו סיפרי תורה </dd>
+                            <dt class="red">concept</dt>
+                            <dd class="right">הנהרג על יחוד השם</dd>
+                            <dt class="red">dislocation</dt>
+                            <dd class="even-left">headstone was found by workers on June 5, 1899 in
+                                the cellar of the inn <q>Zur Stadt Mainz</q> in the street <q>Große
+                                    Bleiche</q></dd>
+
+                        </dl>
+                    </div></div>
+            </div>
+            <div class="step">
+                <!-- Hammerschlag -->
+                <div class="row">
+                    <div class="six columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/2338_FN_0206040127.jpg"
+                                    ><img src="resources/img/2338_FN_0206040127.jpg"
+                                    style="width:40rem" /></a></figure>
+                        <p class="x-small up-25 centered">Hamburg-Altona, Königstraße: <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-2338&amp;lang=en&amp;anzeige=mix"
+                                >hha-2338</a>
+                            <br />foto: Bert Sommer</p>
+                    </div>
+                    <div class="six columns">
+                        <dl class="even-left small down-25 line-height-one-five">
+                            <dt class="red">place of burial</dt>
+                            <dd class="even-left">Hamburg</dd>
+                            <dt class="red">name</dt>
+                            <dd class="even-left">David Hammerschlag</dd>
+                            <dt class="red">date_of_death</dt>
+                            <dd class="even-left">26.10.1686 | 18. Cheschvan 5447</dd>
+                            <dt class="red">place of origin</dt>
+                            <dd class="even-left">Hildesheim</dd>
+                            <dt class="red">intertextuality</dt>
+                            <dd class="even-left">Allusions on biblical David</dd>
+                            <dd class="even-left"> 2 Sam. 15:30 דוד עלה במעלה </dd>
+                            <dd class="even-left"> 1 Kings 2.1 ויקרבו ימי דוד למות</dd>
+                            <dt class="red">symbols</dt>
+                            <dd>magen david | hammer</dd>
+                            <dt class="red">ornaments</dt>
+                            <dd class="even-left">palmette</dd>
+                        </dl></div></div>
+            </div>
+            <div class="step">
+                <!-- Vogel -->
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-right">
+                            <a href="resources/img/1678_FE_0110140126.jpg"><img
+                                    src="resources/img/1678_FE_0110140126.jpg" /></a>
+                        </figure>
+                        <p class="x-small right up-25">Hamburg-Altona<!--, Königstraße-->: <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-1678&amp;lang=en&amp;anzeige=mix"
+                                >hha-1678</a>
+                            <br />foto: Bert Sommer</p>
+                    </div>
+                    <div class="four columns">
+                        <table class="small even-right line-height-one">
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏גם חסידה בשמים‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏<span class="akr"
+                                        >פ</span>ה שוכבת הדרת הנשים‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏<span class="akr"
+                                        >א</span>ף גם עדים וצבי תפארתם‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏<span class="akr"
+                                        >ג</span>מלה חסד עם הרשים‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏<span class="akr"
+                                        >ל</span>זמנה היתה כתר מכתם‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏בת פו״מ כהר״ר
+                                    יוסף‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏פופרט אשת כ״ה
+                                    משה‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏אפינהיי׳ הגובה
+                                    באלטונא‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏נפטר׳ ונקבר׳ יום ב׳
+                                    ך״ז טבת‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏שנת <span class="chr"
+                                        >כ</span><span class="chr">צ</span><span class="chr"
+                                        >פ</span><span class="chr">ו</span><span class="chr"
+                                        >ר</span> נודדת <span class="chr">מ</span><span class="chr"
+                                        >ק</span><span class="chr">נ</span><span class="chr"
+                                        >ה</span>‏‎</td>
+                            </tr>
+                            <tr>
+                                <td style="direction:rtl;text-align:right;">‎‏תנצב״ה ‏‎</td>
+                            </tr>
+                        </table></div>
+                    <div class="four columns">
+                        <dl class="even-left small down-25 line-height-one-five ">
+                            <dt class="red">place of burial</dt>
+                            <dd>Hamburg</dd>
+                            <dt class="red">name(s)</dt>
+                            <dd class="even-left">Vogel</dd>
+                            <dd><u>father</u> Josef Popert</dd>
+                            <dd><u>husband</u> Moshe Oppenheim</dd>
+                            <dt class="red">task</dt>
+                            <dd>הגובה באלטונא‏‎ charity administrator</dd>
+                            <dt class="red">date_of_death</dt>
+                            <dd class="even-left">03.01.1791 | 27. Tewet 5551</dd>
+                            <dt class="red">symbol</dt>
+                            <dd>bird</dd>
+                            <dt class="red">style</dt>
+                            <dd>rhyme, meter, acrostic, chronostic</dd>
+                        </dl>
+                    </div>  </div>  </div>
+            <div class="step">
+                <h3 class="red">A Cemetery is a spatial ensemble of objects (headstones) </h3>
+                <div id="researchdata_alt" style="display:none">
+                    <a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=wrm&amp;release=beta&amp;lang=en">
+                        <img alt="Worms: Im heiligen Sand"
+                            src="resources/img/juedischer_friedhof_worms_s_w.png"
+                            data-image="resources/img/juedischer_friedhof_worms_s_w.png"
+                            data-description="dé.wé. [CC BY-SA 2.0 (https://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons"
+                            style="display:none" />
+                        <!-- https://commons.wikimedia.org/wiki/File:Jüdischer_Friedhof_Worms.jpg  -->
+                    </a>
+                    <a
+                        href="http://steinheim-institut.de/cgi-bin/epidat?id=ffb&amp;release=beta&amp;lang=en">
+                        <img alt="Frankfurt, Battonstraße: Old Cemetery"
+                            src="resources/img/ffb6903.jpg" data-image="resources/img/ffb6903.jpg"
+                            data-description="Andreas Heemsteege [CC BY 4.0], via epidat"
+                            style="display:none" />
+                    </a>
+                    <a
+                        href="http://steinheim-institut.de/cgi-bin/epidat?id=wrm&amp;release=beta&amp;lang=en">
+                        <img alt="Hamburg-Altona: Ashkenazic Cemetery"
+                            src="resources/img/x_0409030214.jpg"
+                            data-image="resources/img/x_0409030214.jpg"
+                            data-description="Bert Sommer [CC BY 4.0], via epidat"
+                            style="display:none" />
+                    </a>
+                    <a
+                        href="http://steinheim-institut.de/cgi-bin/epidat?id=bay&amp;release=beta&amp;lang=en&amp;anzeige=mix">
+                        <img alt="Bayreuth: Jewish Cemetery"
+                            src="resources/img/0000_bth_090521l1000946pc_klein_s_w.png"
+                            data-image="resources/img/0000_bth_090521l1000946pc_klein_s_w.png"
+                            data-description="Bert Sommer [CC BY 4.0], via epidat"
+                            style="display:none" />
+                    </a>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Wide range of perspectives</h2>
+                <dl>
+                    <dt class="red">text</dt>
+                    <dd>text constitution | edition</dd>
+                    <dt class="red">image</dt>
+                    <dd>symbols | ornaments | decoration </dd>
+                    <dt class="red">textbearing objects</dt>
+                    <dd>form | shape | material</dd>
+                    <dt class="red">relations</dt>
+                    <dd>intertextuality</dd>
+                    <dd>inter-culturality</dd>
+                    <dd>spatial relations between objects: headstone is part of a row | a field | a
+                        section | the cemetery</dd>
+                    <dt class="red">history</dt>
+                    <dd>onomatology (names)</dd>
+                    <dd>prosopography (persons)</dd>
+                    <dd>events</dd>
+                    <dd>ideas – values – mentalities</dd>
+                </dl></div>
+            <!--
+
+history
+                    onomatology - names / development of "Jewish Names"
+                    biography / genealogy (e.g. family history / relations)
+                    history of community, migration, 'events'
+                    economic history 
+                    art-history 
+                    symbols, ornaments
+                    form and shape
+                    linguistic/lexicography interest
+                    literature
+                    prosody
+                    history of ideas - history of values - history of mentalities
+                    theology 
+                    gender research
+                    geology (materials)
+-->
+            <div class="step">
+                <div class="row">
+                    <div class="six columns">
+                        <h2 class="red">epidat</h2>
+                        <ul class="line-height-one-five t">
+                            <li>started in 2002 as a database</li>
+                            <li>is online since 2006</li>
+                            <li>driven by projects</li>
+                            <li>strives to support various disciplinary perspectives</li>
+                        </ul>
+                    </div>
+                    <div class="six columns box">
+                        <figure class="mfp-lightbox" style="height:600px"><a
+                                href="resources/img/x_0409030217.jpg"><img
+                                    src="resources/img/x_0409030217.jpg" style="width:40rem"
+                             /></a></figure><p class="x-small left  up-50 line-height-one-five"
+                            >Hamburg, Königstraße<br />foto: Bert Sommer</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <div class="six columns ">
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/kol4.jpg"><img src="resources/img/kol4.jpg"
+                                 /></a>
+                        </figure>
+                        <figure class="mfp-lightbox">
+                            <a href="resources/img/kol3_auswahl.png"><img
+                                    src="resources/img/kol3_auswahl.png" /></a><figcaption
+                                class="x-small right">fotos M. Brocke </figcaption>
+                        </figure>
+                    </div>
+                    <div class="six columns">
+                        <ul>
+                            <li>database </li>
+                        </ul>
+                    </div></div>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <div class="six columns">
+                        <h2 class="red">scope</h2>
+                        <ul class="line-height-one-five">
+                            <li>190 digital editions of historical Jewish cemeteries</li>
+                            <li>35,000 headstones</li>
+                            <li>68,000 digital images</li>
+                            <li>900 years</li>
+                            <li>4 countries (Germany, Netherlands, Czechia, Lithuania</li>
+                        </ul>
+                        <table>
+                            <tr>
+                                <td>persons</td>
+                                <td class="right">31,456</td>
+                            </tr>
+                            <tr>
+                                <td>dates</td>
+                                <td class="right">24,191</td>
+                            </tr>
+                            <tr>
+                                <td>places</td>
+                                <td class="right">190</td>
+                            </tr>
+                            
+                        </table></div>
+                    <div class="six columns">
+                        <figure class="mfp-lightbox even-right"><a
+                                href="resources/img/epidat_startpage.png"><img
+                                    src="resources/img/epidat_startpage.png" /></a></figure>
+                        <p class="x-small right up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?lang=en"
+                                >www.steinheim-institut.de/cgi-bin/epidat</a></p>
+                        <figure class="mfp-lightbox even-right down-100"><a
+                                href="resources/img/epi_beta_small.png"><img
+                                    src="resources/img/epi_beta_small.png" /></a></figure>
+                        <p class="x-small right up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?lang=en&amp;release=beta"
+                                >beta version</a> (2019/03)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <table class="small">
+                    <tr>
+                        <th></th>
+                        <th class="red"><h2>epidat research data </h2></th>
+                    </tr>
+                    <tr>
+                        <td><h4>licence</h4></td>
+                        <td>are released online under an open Creative Commons Licence <a
+                                href="http://creativecommons.org/licences/by/4.0"><img
+                                    src="resources/img/cc.png" style="width:10rem" /></a></td>
+
+                    </tr>
+                    <tr>
+                        <td><h4>interoperability</h4></td>
+                        <td class="line-height-one-five"> are provided in different formats <ul
+                                class="even-left line-height-one-five">
+                                <li> in html for the world wide web
+                                    <!--a format
+                            for <span class="dotted">readers</span>, which provides epigraphical
+                            research data by the means of webdesign, typography in a structured form--></li>
+                                <li> in <a href="https://sourceforge.net/p/epidoc/wiki/Home/"
+                                        >EpiDoc: TEI XML for Epigraphic Documents</a>
+                                    for<!-- <span
+                                class="dotted">users</span>, thus providing research data in a-->
+                                    machine readable, system-independent, program-independent and
+                                    structured access <!--data format, which is --> (and widely used
+                                    by digitalepigraphers)</li>
+                            </ul></td>
+                    </tr>
+                    <tr>
+                        <td><h4>controlled vocabularies</h4></td>
+                        <td>are mapped to authority files and thesauri (kind of digital shelf
+                            mark)</td>
+                    </tr>
+                    <tr>
+                        <td><h4>interfaces</h4></td>
+                        <td>are provided via a machine readable interface (e.g. in order to re-use
+                            the data)</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">cultural impact</h2>
+                <figure class="mfp-lightbox">
+                    <a href="resources/img/lichtisch_kanne.png"><img
+                            src="resources/img/lichtisch_kanne.png" /></a></figure><p
+                    class="right x-small">HyperImage <a
+                        href="http://www.uni-lueneburg.de/hyperimage/HI_Altona/">Lighting Table</a>
+                    with cans (Hamburg chronologically)</p>
+            </div>
+            <div class="step">
+                <div class="row">
+                    <div class="three columns">
+                        <h2 class="red">shoes</h2>
+                    </div>
+                    <div class="nine columns">
+                        <ul>
+                            <li>depicting relation between persons and houses</li>
+                            <li>former housesymbol became part of name</li>
+                            <li>symbols depicting contemporary design</li>
+                        </ul></div></div>
+                <div id="shoes" style="display:none">
+                    <a href="resources/img/shoe_ffb-444.png"><img alt="ffb-444"
+                            src="resources/img/shoe_ffb-444.png"
+                            data-image="resources/img/shoe_ffb-444.png" data-description="ffb-444"
+                            style="display:none" /></a>
+                    <a href="resources/img/shoe_ffb-444_klein.png"><img alt="ffb-2057"
+                            src="resources/img/shoe_ffb-2057.png"
+                            data-image="resources/img/shoe_ffb-2057.png" data-description="ffb-2057"
+                            style="display:none" /></a>
+                    <a href="resources/img/shoe_ffb-55.png"><img alt="ffb-55"
+                            src="resources/img/shoe_ffb-55.png"
+                            data-image="resources/img/shoe_ffb-55.png" data-description="ffb-55"
+                            style="display:none" /></a>
+                    <a href="resources/img/shoe_ffb-1584.png"><img alt="ffb-1584"
+                            src="resources/img/shoe_ffb-1584.png"
+                            data-image="resources/img/shoe_ffb-1584.png" data-description="ffb-1584"
+                            style="display:none" /></a>
+                    <a href="resources/img/shoe_ffb-52.png"><img alt="ffb-52"
+                            src="resources/img/shoe_ffb-52.png"
+                            data-image="resources/img/shoe_ffb-52.png" data-description="ffb-52"
+                            style="display:none" /></a>
+                    <a href="resources/img/shoe_ffb-1678.png"><img alt="ffb-1678"
+                            src="resources/img/shoe_ffb-1678.png"
+                            data-image="resources/img/shoe_ffb-1678.png" data-description="ffb-1678"
+                            style="display:none" /></a>
+                </div>
+            </div>
+          
+           
+                    
+            
+            <div class="step">
+                <h2 class="red">location-based access options</h2>
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left ">
+                            <a href="resources/img/locationbased.png">
+                                <img src="resources/img/locationbased.png" /></a>
+                        </figure>
+                        <p class="x-small up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?info=space&amp;lang=en&amp;release=beta&amp;show=cemeteries&amp;letter=s#alfabet"
+                                >browse cemeteries</a></p>
+                    </div>
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/fulltext_rotschild.png">
+                                <img src="resources/img/fulltext_rotschild.png" style="width:20rem"
+                                 /></a>
+                        </figure>
+                        <p class="x-small up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?suche=Rothschild&amp;function=suche&amp;sel=ad2%27aha%27l05%27alt%27ans%27ar1%27asc%27bme%27arl%27bay%27bee%27c02%27bng%27blr%27sb3%27bom%27gda%27gdn%27bnm%27bns%27bor%27hrs%27wal%27e51%27bri%27alm%27mad%27e01%27e99%27e02%27brh%27che%27c01%27dtm%27dds%27din%27e03%27e04%27ap2%27ap1%27dor%27hoe%27dld%27dme%27dwi%27c03%27du2%27du3%27du4%27du1%27du6%27du5%27elm%27erc%27erf%27wsw%27seg%27est%27wrd%27kuc%27ffb%27ffs%27ffh%27frd%27e05%27e52%27gsk%27gws%27e10%27e11%27e12%27e13%27e14%27hgl%27hgw%27hb2%27hbs%27hha%27hht%27hdh%27hnn%27hns%27blu%27hen%27her%27hld%27hos%27hxf%27c05%27ils%27imr%27ihl%27iis%27irw%27igw%27e06%27jen%27e17%27e18%27e19%27kal%27e20%27hlh%27kob%27kwr%27e21%27e22%27kre%27e23%27e42%27e43%27wnk%27lag%27lau%27lin%27mz1%27e25%27mmd%27sb1%27msn%27min%27e26%27e31%27e30%27e29%27e27%27e28%27mlh%27mue%27e32%27e41%27sb5%27e33%27c06%27obh%27obl%27obw%27oer%27ora%27sb0%27l06%27pro%27que%27rae%27reg%27rex%27bbr%27e54%27e53%27e34%27e35%27rth%27oes%27sbs%27sb2%27sb9%27sb6%27l08%27srm%27e09%27e16%27smk%27st3%27e36%27sgb%27e58%27sdh%27sts%27spy%27sb7%27sb8%27sb4%27roe%27e37%27e44%27tr1%27tri%27e60%27e61%27l07%27e38%27e39%27e40%27lom%27ver%27e07%27e08%27win%27wrm%27hdf&amp;lang=de&amp;projekt=&amp;sm=AND&amp;check=1&amp;beg=&amp;end=&amp;wo=edueb"
+                                >full-text search</a></p>
+                    </div>
+                    <div class="four columns">
+                        <h4>Browse</h4>
+                        <ul class="even-left">
+                            <li>by place</li>
+                            <li>by region</li>
+                            <li>visuell by maps</li>
+                            <li>full-text search in one, several or all collections</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">time-based access options</h2>
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left ">
+                            <a href="resources/img/timebased_hebrew.png">
+                                <img src="resources/img/timebased_hebrew.png" /></a>
+                        </figure>
+                        <p class="x-small up-25">search for <a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?info=time&amp;show=search4hebyear&amp;lang=en&amp;release=beta"
+                                >hebrew year</a></p>
+                    </div>
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/geobrowser_names.png">
+                                <img src="resources/img/geobrowser_names.png" style="width:20rem"
+                                 /></a>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <h4>Browse</h4>
+                        <ul class="even-left">
+                            <li>by year, month, day</li>
+                            <li>by period</li>
+                            <li>with spatio-temporal geobrowser</li>
+                            <li>full-text search in one, several or all collections</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">Geobrowser</h2>
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left ">
+                            <a href="resources/img/schum_geo.png">
+                                <img src="resources/img/schum_geo.png" /></a>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/hha_geo.png">
+                                <img src="resources/img/hha_geo.png" /></a>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <ul class="even-left down-25">
+                            <li>compare</li>
+                            <li>timeline</li>
+                            <li>map</li>
+                            <li>search in data</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">names</h2>
+                <div class="row">
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left ">
+                            <a href="resources/img/listofname.png">
+                                <img src="resources/img/listofname.png" /></a>
+                        </figure>
+                        <p class="x-small up-25"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?info=names&amp;lang=en&amp;release=beta&amp;show=listofname&amp;letter=v#alfabet"
+                                >list of names</a></p>
+                    </div>
+                    <div class="four columns">
+                        <figure class="mfp-lightbox even-left">
+                            <a href="resources/img/listofpersons.png">
+                                <img src="resources/img/listofpersons.png" /></a>
+                        </figure>
+                    </div>
+                    <div class="four columns">
+                        <ul class="even-left down-25">
+                            <li>collection of names</li>
+                            <li>visualizing person data </li>
+                            <li><a
+                                    href="https://geobrowser.de.dariah.eu/embed/?csv1=https://geobrowser.de.dariah.eu/storage/646052"
+                                    >live demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="step">
+                <h2 class="red">personal data</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five even-left">
+                            <li>date of death according to common date</li>
+                            <li>date of death according to hebrew date</li>
+                            <li>Link to edition (html)</li>
+                            <li>Link to edition (EpiDoc TEI XML)</li>
+                            <li>if possible, enriched by linked data</li>
+                        </ul>
+                        <!-- <h3 class="red">numbers</h3><ul class="line-height-one-five even-left">
+                            <li>37.588 person datasets </li>
+                            <li>24.124 date of death records (ISO 8601)</li>
+                        </ul>-->
+                    </div>
+                    <div class="six columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/ffb-80-1.png"><img
+                                    src="resources/img/ffb-80-1.png" class="up-100" /></a></figure>
+                        <p class="right x-small"><a
+                                href="http://www.steinheim-institut.de/cgi-bin/epidat?id=ffb-80-1&amp;lang=en&amp;release=beta"
+                                >ffb-80-1</a></p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="step">
+                <h2 class="red">#yahrzeit</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five even-left">
+                            <li>comemmoration the death according to the corresponding Hebrew Date
+                                to the day of death </li>
+                        </ul>
+                        <figure class="mfp-lightbox"><a href="resources/img/yahrzeit.png"><img
+                            src="resources/img/yahrzeit.png"  /></a></figure>
+                        <p class="x-small right"><a
+                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=yahrzeit&amp;lang=en"
+                            >yahrzeit</a></p>
+                    </div>
+                    <div class="six columns"><figure class="mfp-lightbox even-left"><a href="resources/img/twitter.png"><img src="resources/img/twitter.png" class="up-100"/></a></figure>
+
+                    </div>
+                </div>
+            </div>-->
+            <!--<div class="step">
+                <h2 class="red">#onthisday and search4date</h2>
+                <div class="row">
+                    <div class="six columns">
+                        <ul class="line-height-one-five even-left">
+                            <li>persons who died on today's date <code>#onthisday</code></li>
+                            <li>more specific <code>search4date</code></li>
+                        </ul>
+                    </div>
+                    <div class="six columns">
+                        <figure class="mfp-lightbox"><a href="resources/img/onthisday.png"><img
+                            src="resources/img/onthisday.png" class="up-50"
+                            style="width:40%" /></a></figure>
+                        <p class="x-small up-50"><a
+                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=onthisday&amp;lang=en"
+                            >onthisday</a></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="three columns"><p class="x-small right">yyyy<br/>
+                        <a
+                            href="http://www.steinheim-institut.de/cgi-bin/epidat?info=onthisday&amp;lang=en&amp;search4date=1318"
+                            >search4date=1318</a></p><figure class="mfp-lightbox"><a
+                                href="resources/img/onthisday_1318.png"><img
+                                    src="resources/img/onthisday_1318.png" /></a></figure>
+                    </div>
+                    <div class="three columns"><p class="x-small right">yyyy-mm<br/><a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?info=onthisday&amp;lang=en&amp;search4date=1318-09"
+                        > search4date=1318-09</a></p><figure class="mfp-lightbox"><a
+                            href="resources/img/onthisday_1318-09.png"><img
+                                src="resources/img/onthisday_1318-09.png"
+                            /></a></figure>
+                    </div>
+
+                    <div class="three columns"><p class="x-small right">yyyy-mm-dd<br/><a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?info=onthisday&amp;lang=en&amp;search4date=1318-09-27"
+                        >search4date=1318-09-27</a></p><figure class="mfp-lightbox"><a
+                            href="resources/img/onthisday_1318-09-27.png"><img
+                                src="resources/img/onthisday_1318-09-27.png"
+                            /></a></figure>
+                    </div>
+                    <div class="three columns"><p class="x-small right">mm-dd <br/><a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?info=onthisday&amp;lang=en&amp;search4date=09-13"
+                        >search4date=09-13</a></p><figure class="mfp-lightbox"><a
+                            href="resources/img/onthisday_09-13.png" ><img
+                                src="resources/img/onthisday_09-13.png" /></a></figure>
+                    </div>
+                </div>
+            </div>-->
+            <div class="step">
+                <h2 class="red">Sharing Data and experience </h2>
+                <p><a href="https://peace.sites.uu.nl">PEACE Portal</a> and <a
+                        href="https://digicademy.github.io/DARIAH-GT/">DARIAH-DE</a></p>
+                <table class="x-small line-height-one-five">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th><a href="http://cds.library.brown.edu/projects/Inscriptions">IIP</a>
+                                – Inscriptions of Israel | Palestine</th>
+                            <th><a href="http://www.steinheim-institut.de/cgi-bin/epidat?lang=en"
+                                    >epidat</a> – Database of Jewish Epigraphy</th>
+                            <th><a href="http://www.inschriften.net">DIO</a> – Deutsche Inschriften
+                                Online</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>online</strong></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/IIP.png" style="width:20rem"
+                                 /></figure></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/epidat_startpage.png" style="width:30rem"
+                                     /></figure></td>
+                            <td><figure style="text-align:left;border:0;margin:0"><img
+                                        src="resources/img/dio.png" style="width:30rem"
+                                 /></figure></td>
+                        </tr>
+
+                        <tr>
+                            <td><strong>quantity</strong></td>
+                            <td><a
+                                    href="http://library.brown.edu/search/solr_pub/iip/?q=*%3A*&amp;start=0&amp;rows=0&amp;indent=on&amp;facet=on&amp;facet.field=religion&amp;wt=json"
+                                    > 3,589</a></td>
+                            <td><a href="http://steinheim-institut.de/cgi-bin/epidat?info=peranno"
+                                    >34,800</a></td>
+                            <td><a title="ca.">ca. 18,000</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>time</strong></td>
+                            <td>500 BCE - 640 CE</td>
+                            <td>midth 11<sup>th</sup> - 20<sup>th</sup> century</td>
+                            <td>500-1650 CE</td>
+                        </tr>
+                        <tr>
+                            <td><strong>space</strong></td>
+                            <td>Israel | Palestine</td>
+                            <td>Germany | The Netherlands | Czechia | Lithuania</td>
+                            <td>Germany | Austria | South Tyrol</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Genre</strong></td>
+                            <td>Different</td>
+                            <td>Funeral Inscriptions</td>
+                            <td>Different </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Format</strong></td>
+                            <td colspan="3" class="centered red">EpiDoc: TEI XML for Epigraphic
+                                Documents</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Example</strong></td>
+                            <td><a
+                                    href="http://library.brown.edu/cds/projects/iip/viewinscr/qumr0001/"
+                                    >QUAMR0001</a></td>
+                            <td><a
+                                    href="http://www.steinheim-institut.de/cgi-bin/epidat?id=ffb-80&amp;lang=en"
+                                    >ffb-80</a></td>
+                            <td><a
+                                    href="http://www.inschriften.net/zeige/suchergebnis/treffer/nr/di034-0561.html#content"
+                                    >34-561</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="step">
+                <h2 class="red">Re-use of epidat-research data for genealogy </h2>
+                <div class="row">
+                    <div class="two columns"><figure class="mfp-lightbox"><a
+                                href="resources/img/hha_visualization.png"><img
+                                    src="resources/img/hha_visualization.png" /></a></figure>
+                        <p class="x-small up-25"><a
+                                href="http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html"
+                                >example</a> by Prof. Schrade</p>
+                        <figure class="mfp-lightbox"><a
+                                href="resources/img/graph_aha-family-relations.png"><img
+                                    src="resources/img/graph_aha-family-relations.png"
+                             /></a></figure>
+                        <p class="x-small up-25"><a
+                                href="http://xtriples.spatialhumanities.de/examples/dh/epidat/index.html"
+                                >example</a> by Kollatz-Kuczera-Schrade</p>
+                    </div>
+                    <div class="ten columns">
+                        <ul class="line-height-one-five">
+                            <li>Extraction and visualization of family relations from the Hamburg
+                                Altona gravestone corpus using LOD approaches</li>
+                            <li>based on epidat's machine-readable exchange-format, wherein
+                                family-relations are given</li>
+                        </ul>
+                    </div></div>
+                <pre><code class="xml">&lt;listPerson&gt;
+  &lt;person xml:id="hha-3361-1" sex="1"&gt;
+   &lt;persName&gt;Schmuel ben Jehuda&lt;/persName&gt;
+   <span class="red"><strong>&lt;death when="1621-08-17"/&gt;</strong></span>
+  &lt;/person&gt;
+  &lt;listRelation&gt;
+   &lt;relation name="parent" active="#hha-3361-1" passive="#hha-2437-1 #hha-6241-1"/&gt;
+   &lt;relation name="spouse" mutual="#hha-3360-1 #hha-3361-1"/&gt;
+ &lt;/listRelation&gt;
+&lt;/listPerson&gt;</code></pre>
+                <p class="x-small right"><a
+                        href="http://www.steinheim-institut.de/cgi-bin/epidat?id=hha-3361-teip5"
+                        >hha-3361-teip5</a></p>
+            </div>
+            <!--<div class="step">
+                <h2 class="red centered">DEMO</h2>
+            </div>
+-->
+            <div class="step">
+                <div class="centered">
+                    <h1 class="red">F I N I S</h1>
+                    <h2>סוף דבר הכל נשמע</h2>
+                </div>
+                <div class="centered down-100">
+                    <h3>
+                        <a href="#literature">Software and Literature</a></h3><p class="x-small"
+                    ></p>
+                </div>
+            </div>
+            <div class="step" id="literature">
+                <h2 class="red">Literature &amp; Software</h2>
+                <h4>Digital Epigraphy and EpiDoc</h4>
+                <ul class="small line-height-one-five">
+                    <li>Tom Elliott, Gabriel Bodard, Hugh Cayless et al. (2006-2017), <a
+                            href="https://sourceforge.net/p/epidoc/wiki/Home/">EpiDoc: Epigraphic
+                            Documents in TEI XML. Online material</a>, available: &lt;<a
+                            href="http://epidoc.sf.net">http://epidoc.sf.net</a>&gt;</li>
+
+                    <li>Julia Flanders; Charlotte Roueché: <a
+                            href="http://www.stoa.org/epidoc/gl/latest/intro-eps.html">Gentle
+                            Introduction To Mark-Up For Epigraphers</a>
+                    </li>
+                    <li>Bodard G. &amp; Stoyanova S. 2016. <a href="https://doi.org/10.5334/bat.d"
+                            >Epigraphers and Encoders</a>: Strategies for Teaching and Learning
+                        Digital Epigraphy. In: Romanello M. &amp; Bodard G, Digital Classics Outside
+                        the Echo-Chamber. London: Ubiquity Press.</li>
+                    <li>H. Cayless; C.M. Roueché; Tom Elliott; Gabriel Bodard (2009): "Epigraphy in
+                        2017." Digital Humanities Quarterly 3.1. <a
+                            href="http://digitalhumanities.org/dhq/vol/3/1/000030/000030.html"
+                            >http://digitalhumanities.org/dhq/vol/3/1/000030/000030.html</a></li>
+
+
+                </ul>
+            </div>
+            <div class="step"><h4>Presentations</h4>
+                <ul class="small line-height-one-five">
+                    <li>Kollatz, Thomas. “<a href="https://kollatzthomas.github.io/20180611_Utrecht"
+                            >Digitale Approaches to Cemeteries</a>: Preservation and Education.”
+                        presented at the All that remains: Education and Conservation of Jewish
+                        Funerary Culture, Utrecht, June 12, 2018. </li>
+                    <li>Kollatz, Thomas. “<a
+                            href="https://kollatzthomas.github.io/20180305_Workshop_Schum/"
+                            >Epigraphische Datenbanken zu den Schum-Gedenkstätten</a>: Status Quo
+                        und Desiderata.” presented at the Intensivworkshop Informationssysteme,
+                        Mainz Coworking Area im Dock 39, March 5, 2018. </li>
+                    <li>Kollatz, Thomas. “<a
+                            href="https://kollatzthomas.github.io/20180529_Wuppertal/">epidat –
+                            Forschungsplattform zur jüdischen Grabsteinepigraphik</a>: Edition,
+                        Kommentierung, Annotation, Visualisierung und Analyse jüdischer Grabmale aus
+                        neun Jahrhundert.” presented at the Vortragsreihe des IZED im Sommersemester
+                        2018: Annotation Kommentar Erläuterung, Wuppertal, May 29, 2018. </li>
+                    <li>Kollatz, Thomas, and Max Grüntgens. “<a
+                            href="https://digicademy.github.io/DARIAH-GT">Annotieren, analysieren,
+                            visualisieren</a>. Repositorien mergen, analysieren und visualisieren.”
+                        presented at the DARIAH-DE Grand Tour, Darmstadt, September 20, 2018. </li>
+                    <li>Andreas Kuczera, Thomas Kollatz und Torsten Schrade: <a
+                            href="http://dhd2016.digitale-akademie.de/workshop/">Methods and Tools
+                            for visualising Digital Humanities data sets</a>, DHd 2016 Leipzig</li>
+
+                </ul></div>
+            <div class="step">
+                <h4>Software</h4>
+                <ul class="small line-height-one-five">
+                    <li>
+                        <a href="https://github.com/impress/impress.js">Impress.js</a>
+                        (presentation) </li>
+                    <li><a href=""></a></li>
+                    <li>
+                        <a href="https://github.com/dimsemenov/Magnific-Popup">Magnific Popup</a>
+                        (Lightbox) </li>
+                    <li>
+                        <a href="http://unitegallery.net/">Unite Gallery</a> (photo gallery) </li>
+                </ul>
+            </div>
+        </div>
+        <!-- jquery -->
+        <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+        <!-- unite gallery -->
+        <script type="text/javascript" src="vendor/unitegallery/js/unitegallery.min.js"></script>
+        <script type="text/javascript" src="vendor/unitegallery/themes/tiles/ug-theme-tiles.js"></script>
+        <script type="text/javascript" src="resources/js/unite.gallery.js"></script>
+        <!-- chartist -->
+        <!-- <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+        <script src="resources/js/chartist.charts.js"></script>-->
+        <!-- codemirror -->
+        <script src="vendor/codemirror/lib/codemirror.js"></script>
+        <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+        <script src="vendor/codemirror/mode/sparql/sparql.js"></script>
+        <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("sparql"), {
+            mode: "application/sparql-query",
+            matchBrackets: true,
+            lineNumbers: true,
+            viewportMargin: Infinity
+        });
+    </script>
+        <!-- highlight -->
+        <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="resources/js/hljs.linenumbering.js"></script>
+        <!-- swiper -->
+        <script src="vendor/swiper/swiper.min.js"></script>
+        <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            spaceBetween: 30,
+            hashnav: true
+        });
+    </script>
+        <!-- magnific popup -->
+        <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+        <script src="resources/js/magnific-popup.lightbox.js"></script>
+        <!-- impress.mod.js -->
+        <script src="vendor/impress/impress.fork.js"></script>
+        <script src="vendor/impress/impress-slidenum.js"></script>
+        <script>
+        var obj = impress();
+        obj.init();
+        initSlideNo(obj);
+    </script>
+        <!-- Links to TEI-Documentation -->
+        <script src="resources/js/tei-documentation-links.js">
+    </script>
+    </body>
+</html>
